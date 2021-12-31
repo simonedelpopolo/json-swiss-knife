@@ -172,6 +172,8 @@ Object.defineProperty( json_swiss_knife, isJsonSymbol, {
     },
 } )
 
+Object.freeze( json_swiss_knife )
+
 /**
  * Check if the given string is valid json syntax before to parse it and return an object.
  *

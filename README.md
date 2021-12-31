@@ -1,6 +1,6 @@
 # json-swiss-knife
 
-> ℹ️ A small swiss-knife for json files and string. Error checking, and some useful functionalities to handle responses.
+> ℹ️ A swiss-knife for json files and string. Error checking, and some useful functionalities to handle responses.
 
 > ℹ️ Javascript ESM module.
 
