@@ -1,4 +1,3 @@
-import * as constants from 'constants'
 import * as Module from 'module'
 import { array_, object_, string_ } from 'oftypes'
 
