@@ -1,5 +1,6 @@
+import * as constants from 'constants'
 import * as Module from 'module'
-import { array_, string_ } from 'oftypes'
+import { array_, object_, string_ } from 'oftypes'
 
 const json_swiss_knife = Object.create( Module )
 
@@ -153,18 +154,32 @@ Object.defineProperty( json_swiss_knife, isJsonSymbol, {
      */
     value: async function is_json( string ) {
     
-        const type_check = await type__.string_buffer( string ).catch( error => error )
+        let is_string
+    
+        if( Buffer.isBuffer( string ) === true )
+            is_string = string.toString( 'utf-8' )
+    
+        else if ( await string_( string ) === true )
+            is_string = string
+    
+        else
+            is_string = false
+        
+        let parsed
+        if( typeof is_string !== 'boolean' ){
+            
+            parsed = await parse( is_string )
+            if( await object_( parsed ) === true )
+                parsed = true
+            
+        }
         
         return new Promise( ( resolve, reject ) => {
             
-            if( type_check === false )
-                reject( type_check )
+            if( is_string === false )
+                reject( `only string or Buffer are accepted type for \`string\` argument. Given type: ${ typeof string }` )
             
-            const parsed = parse( type_check )
-                .then( () => true )
-                .catch( () => false )
-            
-            if( parsed === false )
+            if( parsed !== true )
                 resolve( false )
             
             resolve( true )
@@ -182,7 +197,8 @@ Object.freeze( json_swiss_knife )
  */
 export async function parse( string ){
     
-    return json_swiss_knife[ parseSymbol ]( string ).catch( error => error )
+    return json_swiss_knife[ parseSymbol ]( string ).then( obj => obj )
+        .catch( error => error )
 }
 
 /**
@@ -193,11 +209,12 @@ export async function parse( string ){
  *
  * @param {string[]|number[]} array - The give array.
  * @param {boolean=false} obj - If set to true it will give back an object instead of a json string.
- * @returns {Promise | PromiseFulfilledResult<|string|object> | PromiseRejectedResult<string>}
+ * @returns {Promise | PromiseFulfilledResult<string|object> | PromiseRejectedResult<string>}
  */
 export async function property_value( array, obj= false ){
     
-    return json_swiss_knife[ property_valueSymbol ]( array, obj ).catch( error => error )
+    return json_swiss_knife[ property_valueSymbol ]( array, obj ).then( obj => obj )
+        .catch( error => error )
 }
 
 /**
@@ -208,5 +225,6 @@ export async function property_value( array, obj= false ){
  */
 export async function is_json( string ){
     
-    return json_swiss_knife[ isJsonSymbol ]( string ).catch( error => error )
+    return json_swiss_knife[ isJsonSymbol ]( string ).then( boolean => boolean )
+        .catch( error => error )
 }
