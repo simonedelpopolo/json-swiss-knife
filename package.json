@@ -20,16 +20,19 @@
   "scripts": {
     "eslint": "npx eslint . --ext .js",
     "eslint-fix": "npx eslint --fix . --ext .js",
+    "nodemon-assertions": "cd ./assertions && npx nodemon assertions.js",
     "assertions": "cd ./assertions/ && node ./assertions.js",
     "assertions0": "cd ./assertions/ && node ./assertions.js assertion0",
-    "assertions1": "cd ./assertions/ && node ./assertions.js assertion1"
+    "assertions1": "cd ./assertions/ && node ./assertions.js assertion1",
+    "assertions2": "cd ./assertions/ && node ./assertions.js assertion2"
   },
   "dependencies": {
     "oftypes": "^0.2.2"
   },
   "devDependencies": {
     "eslint": "^8.4.1",
-    "eslint-plugin-jsdoc": "^37.2.2"
+    "eslint-plugin-jsdoc": "^37.2.2",
+    "nodemon": "^2.0.15"
   },
   "publishConfig": {
     "access": "public"
