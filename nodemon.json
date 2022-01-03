@@ -1,0 +1,8 @@
+{
+  "verbose": false,
+  "quiet": true,
+  "watch": [
+    "./assertions/*",
+    "./lib/*"
+  ]
+}
