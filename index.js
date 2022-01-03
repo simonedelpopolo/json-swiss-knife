@@ -15,8 +15,7 @@ import {
  */
 export async function parse( string ){
     
-    return p[ ps ]( string ).then( obj => obj )
-        .catch( error => error )
+    return p[ ps ]( string )
 }
 
 /**
@@ -29,18 +28,19 @@ export async function parse( string ){
  * @param {boolean=false} obj - If set to true it will give back an object instead of a json string.
  * @returns {Promise | PromiseFulfilledResult<string|object> | PromiseRejectedResult<string>}
  */
-export async function property_value( array, obj= false ){
+export function property_value( array, obj= false ){
     
-    return p_v[ p_vs ]( array, obj ).then( obj => obj )
-        .catch( error => error )
+    return p_v[ p_vs ]( array, obj )
 }
 
 /**
  * Given a string or Buffer it will return a boolean, true if it is a JSON string false otherwise.
  *
- * @param {string | Buffer} string - .
+ * @param {string | Buffer} string - The string argument to be checked.
+ * @param {boolean=false} error - Default is set to false, if set to true will resolve with the error thrown by parse function.
+ * @returns {Promise | PromiseFulfilledResult<boolean> | PromiseRejectedResult<string>}
  */
-export function is_json( string ){
+export function is_json( string, error = false ){
     
-    return i_j[ i_js ]( string )
+    return i_j[ i_js ]( string, error )
 }

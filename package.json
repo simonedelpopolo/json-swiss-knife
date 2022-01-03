@@ -21,7 +21,8 @@
     "eslint": "npx eslint . --ext .js",
     "eslint-fix": "npx eslint --fix . --ext .js",
     "assertions": "cd ./assertions/ && node ./assertions.js",
-    "assertions0": "cd ./assertions/ && node ./assertions.js assertion0"
+    "assertions0": "cd ./assertions/ && node ./assertions.js assertion0",
+    "assertions1": "cd ./assertions/ && node ./assertions.js assertion1"
   },
   "dependencies": {
     "oftypes": "^0.2.2"
