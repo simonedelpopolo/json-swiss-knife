@@ -29,6 +29,7 @@ const Assertions = {
         
         Assertions.assertion0.statement = {
             
+            // St. function is_json rejects
             '0' : async ( ) => {
                 console.log( '    \x1b[31m executing statement -> ', 0, '\x1b[0m\n' )
     
@@ -55,6 +56,7 @@ const Assertions = {
                 return test_results
             },
     
+            // St. function is_json returns false
             '1' : async ( ) => {
                 console.log( '    \x1b[31m executing statement -> ', 1, '\x1b[0m\n' )
         
@@ -75,6 +77,7 @@ const Assertions = {
                 return test_results
             },
     
+            // St. function is_json rejects with error
             '2' : async ( ) => {
                 console.log( '    \x1b[31m executing statement -> ', 2, '\x1b[0m\n' )
         
@@ -135,7 +138,8 @@ const Assertions = {
         console.log( '    \x1b[32mfunction property_value resolve with json string', '\x1b[31mstatement ->', 3, '\x1b[0m' )
         
         Assertions.assertion1.statement = {
-            
+    
+            // St. function property_value rejects
             '0' : async ( ) => {
                 console.log( '    \x1b[31m executing statement -> ', 0, '\x1b[0m\n' )
                 
@@ -164,6 +168,7 @@ const Assertions = {
                 return test_results
             },
             
+            // St. function property_value reject not `even` array argument
             '1' : async ( ) => {
                 console.log( '    \x1b[31m executing statement -> ', 1, '\x1b[0m\n' )
                 
@@ -185,6 +190,7 @@ const Assertions = {
                 return test_results
             },
             
+            // St. function property_value resolve with object
             '2' : async ( ) => {
                 console.log( '    \x1b[31m executing statement -> ', 2, '\x1b[0m\n' )
     
@@ -210,6 +216,7 @@ const Assertions = {
                 return test_results
             },
     
+            // St. function property_value resolve with json string
             '3' : async ( ) => {
                 console.log( '    \x1b[31m executing statement -> ', 2, '\x1b[0m\n' )
         
