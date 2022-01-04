@@ -1,11 +1,13 @@
-import {
+import json_swiss_knife, {
     is_json as i_j,
     is_jsonSymbol as i_js,
     parse as p,
     property_value as p_v,
     property_valueSymbol as p_vs,
-    parseSymbol as ps
+    parseSymbol as ps,
 } from './lib/json-swiss-knife/exporter.js'
+
+export default json_swiss_knife
 
 /**
  * Check if the given string is valid json syntax before to parse it and return an object.
