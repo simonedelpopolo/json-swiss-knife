@@ -3,7 +3,7 @@ const consoleTimeMessage = '|               \x1b[33massertion finished\x1b[0m   
 console.time( consoleTimeMessage )
 import { EventEmitter } from 'events'
 import { deepStrictEqual, ok, rejects } from 'assert/strict'
-import { is_json, parse, property_value } from '../index.js'
+import json_swiss_knife, { is_json, parse, property_value } from '../index.js'
 
 const AssertionEvent = new EventEmitter()
 console.log( ' --------------------------------------------------------------------------' )
@@ -286,7 +286,7 @@ const Assertions = {
     
         console.log( '___________________________________________________________________________' )
     
-        console.log( '\x1b[32mfunction parse.', '\x1b[31massertion ->', 1, '\x1b[0m' )
+        console.log( '\x1b[32mfunction parse.', '\x1b[31massertion ->', 2, '\x1b[0m' )
         console.log( '  \x1b[32mlisting statements', '\x1b[0m' )
         console.log( '    \x1b[32mfunction parse rejects', '\x1b[31mstatement ->', 0, '\x1b[0m' )
         console.log( '    \x1b[32mfunction parse resolve with object', '\x1b[31mstatement ->', 1, '\x1b[0m' )
@@ -425,7 +425,41 @@ const Assertions = {
         console.log( Assertions.assertion2.statement[ '3' ].message )
         console.log( Assertions.assertion2.statement[ '3' ].given_variable )
         console.log( 'returned response -> ',  response3 )
-    }
+    },
+    
+    // The testing unit for Module json_swiss_knife
+    assertion3 : async () => {
+        
+        let test_results
+        
+        console.log( '__________________________________________________________________________' )
+        
+        console.log( '\x1b[32mModule json_swiss_knife.', '\x1b[31massertion ->', 3, '\x1b[0m' )
+        console.log( '  \x1b[32mlisting statements', '\x1b[0m' )
+        console.log( '    \x1b[32mlisting all the functions', '\x1b[31mstatement ->', 1, '\x1b[0m' )
+        
+        Assertions.assertion3.statement = {
+            
+            // St. calling all the functions
+            '0' : async ( ) => {
+                console.log( '    \x1b[31m executing statement -> ', 0, '\x1b[0m\n' )
+
+                test_results = json_swiss_knife
+                
+                Assertions.assertion3.statement[ '0' ].message = 'test concluded'
+                
+                return test_results
+            },
+            
+        }
+        
+        console.log( '---------------------------------------------------------------------------' )
+        const response0 = await Assertions.assertion3.statement[ '0' ]()
+        console.log( '\x1b[32mlisting all the functions', '\x1b[0m\n' )
+        console.log( Assertions.assertion3.statement[ '0' ].message )
+        console.log( 'returned response -> ',  response0 )
+        
+    },
 }
 
 process.argv.splice( 0, 2 )
