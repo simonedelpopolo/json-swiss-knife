@@ -6,3 +6,4 @@ assertions
 package-lock.json
 nodemon.json
 .github
+.DS_Store
