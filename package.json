@@ -1,6 +1,6 @@
 {
   "name": "json-swiss-knife",
-  "version": "1.5.7",
+  "version": "1.5.8",
   "description": "A small swiss-knife for json files and string. Error checking, and some useful functionalities to handle responses. javascript ESM module",
   "type": "module",
   "engines": {
@@ -27,7 +27,7 @@
     "assertions2": "cd ./assertions/ && node ./assertions.js assertion2"
   },
   "dependencies": {
-    "oftypes": "^0.2.2"
+    "oftypes": "latest"
   },
   "devDependencies": {
     "eslint": "^8.4.1",
