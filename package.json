@@ -1,20 +1,15 @@
 {
   "name": "json-swiss-knife",
-  "version": "1.5.8",
+  "version": "1.5.9",
   "description": "A small swiss-knife for json files and string. Error checking, and some useful functionalities to handle responses. javascript ESM module",
   "type": "module",
   "engines": {
-    "node": ">=v16.13.1 <17",
-    "npm": "~8.3.0"
+    "node": ">=v16.13.1 <17"
   },
   "os": [
     "linux",
     "darwin",
     "!win32"
-  ],
-  "cpu": [
-    "x64",
-    "arm64"
   ],
   "main": "index.js",
   "scripts": {
