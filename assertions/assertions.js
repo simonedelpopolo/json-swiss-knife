@@ -3,7 +3,7 @@ const consoleTimeMessage = '|               \x1b[33massertion finished\x1b[0m   
 console.time( consoleTimeMessage )
 import { EventEmitter } from 'events'
 import { deepStrictEqual, ok, rejects } from 'assert/strict'
-import json_swiss_knife, { is_json, parse, property_value } from '../index.js'
+import { is_json, json_swiss_knife, parse, property_value } from '../index.js'
 
 const AssertionEvent = new EventEmitter()
 console.log( ' --------------------------------------------------------------------------' )

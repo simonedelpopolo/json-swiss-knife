@@ -1,33 +1,28 @@
 {
   "name": "json-swiss-knife",
-  "version": "1.5.9",
-  "description": "A small swiss-knife for json files and string. Error checking, and some useful functionalities to handle responses. javascript ESM module",
+  "version": "1.6.9",
+  "description": "A small swiss-knife for json files and string. Error checking, and some useful functionalities to handle responses. javascript ESModule",
   "type": "module",
   "engines": {
-    "node": ">=v16.13.1 <17"
+    "node": ">=v16.14.0 <17"
   },
-  "os": [
-    "linux",
-    "darwin",
-    "!win32"
-  ],
   "main": "index.js",
   "scripts": {
     "eslint": "npx eslint . --ext .js",
     "eslint-fix": "npx eslint --fix . --ext .js",
-    "nodemon-assertions": "cd ./assertions && npx nodemon assertions.js",
+    "unit-tests": "npx 4t unit",
     "assertions": "cd ./assertions/ && node ./assertions.js",
     "assertions0": "cd ./assertions/ && node ./assertions.js assertion0",
     "assertions1": "cd ./assertions/ && node ./assertions.js assertion1",
     "assertions2": "cd ./assertions/ && node ./assertions.js assertion2"
   },
-  "dependencies": {
-    "oftypes": "latest"
-  },
   "devDependencies": {
-    "eslint": "^8.4.1",
-    "eslint-plugin-jsdoc": "^37.2.2",
-    "nodemon": "^2.0.15"
+    "eslint": "^8.10.0",
+    "eslint-plugin-jsdoc": "^37.9.6",
+    "trythistrythat": "^0.0.15"
+  },
+  "dependencies": {
+    "oftypes": "^0.6.6"
   },
   "publishConfig": {
     "access": "public"

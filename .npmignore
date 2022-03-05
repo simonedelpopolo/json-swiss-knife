@@ -4,5 +4,4 @@
 .eslintignore
 assertions
 package-lock.json
-nodemon.json
 .github

@@ -2,20 +2,18 @@
 
 > ℹ️ A swiss-knife for json files and string. Error checking, and some useful functionalities to handle responses.
 
-> ℹ️ Javascript ESM module.
+**Javascript ESModule.**
 
 ___
 
 ## Index of Contents
 
 - [Installation](#installation)
-
 - [Functions &amp; Examples](#functions-amp-examples)
-
   - [Function parse(string)](#function-parsestring)
   - [Function property_value(array)](#function-property_valuearray)
   - [Function is_json(string)](#function-is_jsonstring)
-
+- [JetBrains OSS Licence](#jetbrains-oss-license)
 ___
 
 ### Installation
@@ -113,3 +111,14 @@ import { is_json } from 'json-swiss-knife'
 const isJson = await is_json( Buffer.from('good morning folks') )
 console.log( isJson ) // false
 ```
+
+___
+
+### JetBrains OSS License
+
+___
+
+I want to thank JetBrains to grant me the Open Source Software license for all their products. This opportunity gives me strength to keep on going with my studies and personal project.  
+To learn more about this opportunity have a look at [Licenses for Open Source Development - Community Support](https://www.jetbrains.com/community/opensource/).
+
+_Thank you_

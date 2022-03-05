@@ -1,13 +1,18 @@
-import json_swiss_knife, {
-    is_json as i_j,
-    is_jsonSymbol as i_js,
-    parse as p,
-    property_value as p_v,
-    property_valueSymbol as p_vs,
-    parseSymbol as ps,
-} from './lib/json-swiss-knife/exporter.js'
+import { is_json__, json_swiss_knife__, parse__, property_value__ } from './lib/exporter.js'
 
-export default json_swiss_knife
+export const json_swiss_knife = json_swiss_knife__
+
+/**
+ * Given a string or Buffer it will return a boolean, true if it is a JSON string false otherwise.
+ *
+ * @param {string | Buffer} string - The string argument to be checked.
+ * @param {boolean=false} error - Default is set to false, if set to true will resolve with the error thrown by parse function.
+ * @returns {Promise | PromiseFulfilledResult<boolean> | PromiseRejectedResult<string>}
+ */
+export function is_json( string, error = false ){
+    
+    return is_json__( string, error )
+}
 
 /**
  * Check if the given string is valid json syntax before to parse it and return an object.
@@ -17,7 +22,7 @@ export default json_swiss_knife
  */
 export async function parse( string ){
     
-    return p[ ps ]( string )
+    return parse__( string )
 }
 
 /**
@@ -32,17 +37,7 @@ export async function parse( string ){
  */
 export function property_value( array, obj= false ){
     
-    return p_v[ p_vs ]( array, obj )
+    return property_value__( array, obj )
 }
 
-/**
- * Given a string or Buffer it will return a boolean, true if it is a JSON string false otherwise.
- *
- * @param {string | Buffer} string - The string argument to be checked.
- * @param {boolean=false} error - Default is set to false, if set to true will resolve with the error thrown by parse function.
- * @returns {Promise | PromiseFulfilledResult<boolean> | PromiseRejectedResult<string>}
- */
-export function is_json( string, error = false ){
-    
-    return i_j[ i_js ]( string, error )
-}
+Object.freeze( json_swiss_knife )
