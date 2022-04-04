@@ -1,40 +1,22 @@
 {
   "name": "json-swiss-knife",
-  "version": "1.6.12",
+  "version": "1.6.13",
+  "license": "Apache-2.0",
   "description": "A small swiss-knife for json files and string. Error checking, and some useful functionalities to handle responses. javascript ESModule",
   "type": "module",
-  "engines": {
-    "node": ">=v16.14.0 <17"
-  },
   "main": "index.js",
   "scripts": {
     "eslint": "npx eslint . --ext .js",
     "eslint-fix": "npx eslint --fix . --ext .js",
-    "unit-tests": "npx 4t unit",
-    "assertions": "cd ./assertions/ && node ./assertions.js",
-    "assertions0": "cd ./assertions/ && node ./assertions.js assertion0",
-    "assertions1": "cd ./assertions/ && node ./assertions.js assertion1",
-    "assertions2": "cd ./assertions/ && node ./assertions.js assertion2"
+    "unit-tests": "npx 4t unit"
   },
   "devDependencies": {
-    "eslint": "^8.11.0",
-    "eslint-plugin-jsdoc": "^38.0.5",
-    "trythistrythat": "latest"
+    "eslint": "^8.12.0",
+    "eslint-plugin-jsdoc": "^38.1.6",
+    "trythistrythat": "^1.2.4"
   },
   "dependencies": {
-    "oftypes": "latest"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "homepage": "https://github.com/simonedelpopolo/json-swiss-knife#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/simonedelpopolo/json-swiss-knife.git"
-  },
-  "bugs": {
-    "email": "simonedelpopolo@outlook.com",
-    "url": "https://github.com/simonedelpopolo/json-swiss-knife/issues"
+    "oftypes": "^1.7.1"
   },
   "keywords": [
     "json",
@@ -50,5 +32,13 @@
     "email": "simonedelpopolo@outlook.com",
     "url": "https://github.com/simonedelpopolo"
   },
-  "license": "Apache-2.0"
+  "homepage": "https://github.com/simonedelpopolo/json-swiss-knife#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonedelpopolo/json-swiss-knife.git"
+  },
+  "bugs": {
+    "email": "simonedelpopolo@outlook.com",
+    "url": "https://github.com/simonedelpopolo/json-swiss-knife/issues"
+  }
 }
