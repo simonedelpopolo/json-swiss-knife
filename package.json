@@ -1,22 +1,22 @@
 {
   "name": "json-swiss-knife",
-  "version": "1.6.13",
+  "version": "1.6.14",
   "license": "Apache-2.0",
   "description": "A small swiss-knife for json files and string. Error checking, and some useful functionalities to handle responses. javascript ESModule",
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "eslint": "npx eslint . --ext .js",
-    "eslint-fix": "npx eslint --fix . --ext .js",
-    "unit-tests": "npx 4t unit"
+    "lint": "npx eslint . --ext .js",
+    "test": "npx 4t unit",
+    "coverage": "npx 4t --coverage unit"
   },
   "devDependencies": {
-    "eslint": "^8.12.0",
-    "eslint-plugin-jsdoc": "^38.1.6",
-    "trythistrythat": "^1.2.4"
+    "eslint": "^8.13.0",
+    "eslint-plugin-jsdoc": "^39.2.7",
+    "trythistrythat": "^1.8.2"
   },
   "dependencies": {
-    "oftypes": "^1.7.1"
+    "oftypes": "^1.8.2"
   },
   "keywords": [
     "json",
